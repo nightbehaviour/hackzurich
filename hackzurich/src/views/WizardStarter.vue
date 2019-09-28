@@ -19,15 +19,15 @@
   import BottomNav from '../components/BottomNav'
 
   const wizardSteps = [
-    'WizardDateAndTime',
-    'WizardDepartureLocation'
+    'WizardDepartureLocations',
+    'WizardDateAndTime'
   ]
 
   export default {
     components: {
       BottomNav,
-      WizardDateAndTime: () => import('./wizard/WizardDateAndTime.vue'),
-      WizardDepartureLocations: () => import('./wizard/WizardDepartureLocations.vue')
+      WizardDepartureLocations: () => import('./wizard/WizardDepartureLocations.vue'),
+      WizardDateAndTime: () => import('./wizard/WizardDateAndTime.vue')
     },
     data () {
       return {
