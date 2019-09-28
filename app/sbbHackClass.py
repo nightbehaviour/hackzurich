@@ -15,13 +15,14 @@ response = requests.post('https://sso-int.sbb.ch/auth/realms/SBB_Public/protocol
 # Parse Token
 response_dict = json.loads(response.text)
 access_token = response_dict['access_token']
+X_Contract_Id = 'cafebabe-0815-4711-1234-ffffdeadbeef'
 
 # Set headers
 headers = {
     'Accept': '*/*',
     'Accept-Language': 'de',
     'X-Contract-Id': 'HAC222P',
-    'X-Conversation-Id': 'cafebabe-0815-4711-1234-ffffdeadbeef',
+    'X-Conversation-Id': X_Contract_Id,
     'Authorization': 'Bearer ' + access_token,
 }
 
@@ -43,7 +44,9 @@ class SurpriseRequest:
                  trainType='IR;ICE/TGV/RJ,EC/IC',
                  arrivalDeparture='ED',
                  ipExtensionTicket='false',
-                 passengers='paxa;42;half-fare'):
+                 passengers='paxa;42;half-fare',
+                 X_Contract_Id=X_Contract_Id,
+                 access_token=access_token):
         """ Initialize Surprise Request instance."""
 
         self._travel_date = travel_date
@@ -52,8 +55,10 @@ class SurpriseRequest:
         self._travel_orig_name = travel_orig_name
         self._trainType = trainType
         self._arrivalDeparture = arrivalDeparture
-        self._ipExtensionTicket=ipExtensionTicket
-        self._passengers=passengers
+        self._ipExtensionTicket = ipExtensionTicket
+        self._passengers = passengers
+        self._X_contract_Id = X_Contract_Id
+        self._access_token = access_token
 
     def __repr__(self):
         """Function to output the characteristics of the instance."""
@@ -184,4 +189,10 @@ class SurpriseRequest:
 
             return {'offer_price': self._offer_price,
                     'rebate': self._rebate,
-                    'rebate_pct': self._rebate_ptc}
+                    'rebate_pct': self._rebate_ptc,
+                    'destination': self._travel_dest_name,
+                    'start_trip_id': self._start_trip_id,
+                    'return_trip_id': self._return_trip_id,
+                    'X-Contract-Id': self._X_contract_Id,
+                    'access_token': self._access_token,
+                    }
