@@ -36,11 +36,7 @@ travel_orig_name = 'Zurich'
 class SurpriseRequest:
     """ Class for a surprise trip request."""
 
-    def __init__(self, 
-                 travel_date=travel_date, 
-                 travel_time=travel_time, 
-                 travel_dest_name=travel_dest_name, 
-                 travel_orig_name=travel_orig_name,
+    def __init__(self,
                  trainType='IR;ICE/TGV/RJ,EC/IC',
                  arrivalDeparture='ED',
                  ipExtensionTicket='false',
@@ -49,10 +45,6 @@ class SurpriseRequest:
                  access_token=access_token):
         """ Initialize Surprise Request instance."""
 
-        self._travel_date = travel_date
-        self._travel_time = travel_time
-        self._travel_dest_name = travel_dest_name 
-        self._travel_orig_name = travel_orig_name
         self._trainType = trainType
         self._arrivalDeparture = arrivalDeparture
         self._ipExtensionTicket = ipExtensionTicket
@@ -60,17 +52,26 @@ class SurpriseRequest:
         self._X_contract_Id = X_Contract_Id
         self._access_token = access_token
 
-    def __repr__(self):
-        """Function to output the characteristics of the instance."""
+    # def __repr__(self):
+    #     """Function to output the characteristics of the instance."""
 
-        date = str('date ' + self._travel_date)
-        time = str('time ' + self._travel_time)
-        orig = str('origin ' + self._travel_orig_name)
+    #     date = str('date ' + self._travel_date)
+    #     time = str('time ' + self._travel_time)
+    #     orig = str('origin ' + self._travel_orig_name)
 
-        return str(date + " / " + time + " / " + orig)
+    #     return str(date + " / " + time + " / " + orig)
 
-    def go_for_offer(self):
+    def go_for_offer(self,
+                     travel_date=travel_date,
+                     travel_time=travel_time,
+                     travel_dest_name=travel_dest_name,
+                     travel_orig_name=travel_orig_name,):
         """Chain many functions to try if you can return an offer price."""
+
+        self._travel_date = travel_date
+        self._travel_time = travel_time
+        self._travel_dest_name = travel_dest_name
+        self._travel_orig_name = travel_orig_name
 
         self.get_location_ids()
         self.get_start_trip_id()
@@ -153,12 +154,12 @@ class SurpriseRequest:
 
         product_id_list = []
         for offer in self._offer_as_list:
-            offer_id = offer['offers'][0]['productId']
-            product_id_list.append(offer_id)
+            product_id = offer['offers'][0]['productId']
+            product_id_list.append(product_id)
+            if product_id == 4004:
+                break
 
-        product_id_set = set(product_id_list)
-
-        if 4004 in product_id_set:
+        if 4004 in set(product_id_list):
             for offer in self._offer_as_list:
                 if offer['offers'][0]['productId'] == 4004:
                     self._offer_price = offer['offers'][0]['price'] * 2
