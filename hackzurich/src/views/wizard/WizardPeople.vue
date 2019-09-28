@@ -4,7 +4,7 @@
       <v-divider class="hdiv" mb="12"></v-divider>
 
       <passenger v-for="(passenger, index) in passengers" :key="index" @input="passengers[index]= $event" :passenger="passenger"></passenger>
-      <v-btn @click="passengers.push({halbtax: false, ga: false})">
+      <v-btn class="buttonpeople" @click="passengers.push({halbtax: false, ga: false})">
         <v-icon color="primary" >mdi-plus</v-icon>
       </v-btn>
 
