@@ -30,7 +30,7 @@ headers = {
 travel_date = '2019-10-27'
 travel_time = '10:00'
 travel_dest_name = 'Bern'
-travel_orig_name = 'Zurich'
+travel_orig_name = 'Basel'
 
 
 class SurpriseRequest:
@@ -71,13 +71,13 @@ class SurpriseRequest:
         self._travel_time = travel_time
         self._travel_orig_name = travel_orig_name
 
-        # price_dicts = {}
-        destinations_list = ['Bern']
+        price_dicts = []
+        destinations_list = ['Bern', 'Montreux',]
         for destination in destinations_list:
             price_dict = self.go_for_offer(travel_dest_name=destination)
-            # price_dicts.update(price_dict)
+            price_dicts.append(price_dict)
 
-        return price_dict
+        return price_dicts
 
     def go_for_offer(self, travel_dest_name):
         """Chain many functions to return a price (offer or not)."""
@@ -193,7 +193,9 @@ class SurpriseRequest:
 
             return {'offer_price': None,
                     'rebate': None,
-                    'rebate_pct': None}
+                    'rebate_pct': None,
+                    'destination': self._travel_dest_name,
+                    }
 
         else:
             self._rebate = self._full_price - self._offer_price
