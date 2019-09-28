@@ -1,14 +1,10 @@
 <template>
     <div>
       <h1>How many people bitch</h1>
-      
-      
-      <passenger></passenger>
-
-      <v-btn>
+      <passenger v-for="(passenger, index) in passengers" :key="index" @input="passengers[index]= $event" :passenger="passenger"></passenger>
+      <v-btn @click="passengers.push({halbtax: false, ga: false})">
         <v-icon color="primary" >mdi-plus</v-icon>
       </v-btn>
-
     </div>
 </template>
 
@@ -19,8 +15,15 @@
     name: 'WizardPeople',
     components: {
       passenger
+    },
+    data(){
+      return {
+        passengers: [{
+          halbtax: false,
+          ga: false
+        }]
+      }
     }
-    
   }
 </script>
 

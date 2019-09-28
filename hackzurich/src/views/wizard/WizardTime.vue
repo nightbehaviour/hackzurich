@@ -2,7 +2,9 @@
     <div>
       <h1>How much bitch?</h1>
       
-        <v-slider></v-slider>
+        <v-slider
+        v-model="time"
+        ></v-slider>
       
     </div>
 </template>
@@ -11,8 +13,11 @@
 
   export default {
     name: 'WizardPrice',
-    
-    
+    data () {
+      return{
+        time: 100
+      }
+    }
   }
 </script>
 
