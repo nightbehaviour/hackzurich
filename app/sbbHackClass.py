@@ -61,17 +61,28 @@ class SurpriseRequest:
 
     #     return str(date + " / " + time + " / " + orig)
 
-    def go_for_offer(self,
-                     travel_date=travel_date,
-                     travel_time=travel_time,
-                     travel_dest_name=travel_dest_name,
-                     travel_orig_name=travel_orig_name,):
-        """Chain many functions to try if you can return an offer price."""
+    def go_for_offers(self,
+                      travel_date=travel_date,
+                      travel_time=travel_time,
+                      travel_orig_name=travel_orig_name):
+        """Query different destinations to get valid offer prices."""
 
         self._travel_date = travel_date
         self._travel_time = travel_time
-        self._travel_dest_name = travel_dest_name
         self._travel_orig_name = travel_orig_name
+
+        # price_dicts = {}
+        destinations_list = ['Bern']
+        for destination in destinations_list:
+            price_dict = self.go_for_offer(travel_dest_name=destination)
+            # price_dicts.update(price_dict)
+
+        return price_dict
+
+    def go_for_offer(self, travel_dest_name):
+        """Chain many functions to return a price (offer or not)."""
+
+        self._travel_dest_name = travel_dest_name
 
         self.get_location_ids()
         self.get_start_trip_id()
