@@ -19,12 +19,13 @@
     components: {
       passenger
     },
-    data: () => {
-      passengers: [{
-        halbtax: false,
-        ga: false
-      }]
-
+    data () {
+      return {
+          passengers: [{
+            halbtax: false,
+            ga: false
+          }]
+      }
     },
     watch: {
       passengers() {

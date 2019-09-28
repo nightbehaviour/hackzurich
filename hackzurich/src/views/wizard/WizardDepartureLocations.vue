@@ -1,7 +1,5 @@
-
-
 <template>
-    <div class="mt-12 d-flex justify-center anim-container">
+    <div class="d-flex justify-center anim-container flex-column">
       <h1 id="main-title" style="">SBB Surprise</h1>
       <v-divider class="hdiv" mb="12"></v-divider>
       <p class="info-text">We want you to discover Switzerland and all <br> it has to offer. We want to offer you the best<br> possible prices and surprise you with <br> the locations that fit your needs. </p>

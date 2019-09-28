@@ -24,8 +24,10 @@
 
   export default {
     name: 'WizardPrice',
-    data: () => {
-      maxPrice: 0
+    data () {
+      return {
+        maxPrice: 0
+      }
     },
     watch: {
       maxPrice() {

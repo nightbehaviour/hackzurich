@@ -14,8 +14,10 @@
 
   export default {
     name: 'WizardPrice',
-    data: () => {
-      time: 0
+    data () {
+      return {
+        time: 0
+      }
     },
     watch: {
       time() {
