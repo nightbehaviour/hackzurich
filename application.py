@@ -9,6 +9,16 @@ def random_number():
         'randomNumber': randint(1, 100)
     }
     return jsonify(response)
+
+#fake api endpoint
+@app.route('/api/get-offers')
+def get_fake_offers():
+    response = {
+        'destination': 'Bern',
+        'origin': 'Zürich'
+    }
+    return jsonify(response)
+# eof fake api endpoint
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def catch_all(path):
