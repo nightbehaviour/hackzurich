@@ -1,17 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-const routerOptions = [
-    { path: '/', component: 'Home' },
-    { path: '/about', component: 'About' }
-]
-const routes = routerOptions.map(route => {
-    return {
-        ...route,
-        component: () => import(`@/views/${route.component}.vue`)
-    }
-})
+import ContextWizard from '../../frontend/src/views/ContextWizard.vue'
+
 Vue.use(Router)
-export default new Router({
-    mode: 'history',
-    routes
+
+const router = new Router({
+  mode: 'history',
+  routes: [
+    {
+      path: '/wizard',
+      name: 'contextwizard',
+      component: ContextWizard,
+      meta: {
+        requiresAuth: true
+      }
+    }
+  ]
 })
+
+export default router
