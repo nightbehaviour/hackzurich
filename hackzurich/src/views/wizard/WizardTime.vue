@@ -13,8 +13,7 @@
         color="secondary"
         track-color="accent"
       ></v-slider>
-
-      <v-btn  v-if="this.time!=0" id="surpriseButton" block depressed
+      <v-btn :disabled=isDisabled id="surpriseButton" block depressed
         v-on:click="submit"
       >Surprise Me!</v-btn>
 
@@ -24,7 +23,6 @@
             <v-icon class="location-pin" id="location-pin" >mdi-clock</v-icon>
             <v-spacer></v-spacer>
         </v-row>
-      
     </div>
 </template>
 
@@ -43,6 +41,11 @@
     watch: {
       time() {
         this.$store.commit('setMaxTime', this.time)
+      }
+    },
+    computed:{
+      isDisabled () {
+        return this.time == 0
       }
     },
     methods: {
