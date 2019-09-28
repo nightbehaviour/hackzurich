@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>How much bitch?</h1>
+      <h1>How much time do you have on your hands?</h1>
       
         <v-slider
         v-model="time"

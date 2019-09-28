@@ -18,7 +18,6 @@
         ></v-text-field>
         <div class="flex-grow-1"></div>
     </div>
-    
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>How much bitch?</h1>
+      <h1>How much are you willing to spend for your surprise trip?</h1>
       
       <v-row>
         <v-col>
@@ -20,7 +20,7 @@
 
   export default {
     name: 'WizardPrice',
-    
+
     
   }
 </script>
