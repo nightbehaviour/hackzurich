@@ -1,10 +1,17 @@
 <template>
     <div>
-      <h1>How much time do you have on your hands?</h1>
+      <h1>How long do you want to travel for?</h1>
       <v-divider class="hdiv"></v-divider>
       
       <v-slider
+        class="slider"
         v-model="time"
+        thumb-label
+        thumb-color="primary"
+        inverse-label
+        label="Minutes"
+        color="secondary"
+        track-color="accent"
       ></v-slider>
 
       <v-btn  v-if="this.time!=0" id="surpriseButton" block depressed
@@ -12,7 +19,11 @@
       >Surprise Me!</v-btn>
 
       <v-progress-circular v-if="loading" indeterminate></v-progress-circular>
-
+        <v-row>
+            <v-spacer></v-spacer>
+            <v-icon class="location-pin" id="location-pin" >mdi-clock</v-icon>
+            <v-spacer></v-spacer>
+        </v-row>
       
     </div>
 </template>
