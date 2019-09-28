@@ -7,16 +7,17 @@
       <p class="info-text">We want you to discover Switzerland and all <br> it has to offer. We want to offer you the best<br> possible prices and surprise you with <br> the locations that fit your needs. </p>
 
       <h1>Tell us where you are traveling from:</h1>
-        <v-row>
-          <v-spacer></v-spacer>
-          <v-icon id="location-pin" >mdi-map-marker</v-icon>
-          <v-spacer></v-spacer>
-        </v-row>
-        <v-text-field 
+        <v-text-field
+          class="depatext"
           required
           label="Starting Destination"
         ></v-text-field>
         <div class="my-auto"></div>
+      <v-row>
+        <v-spacer></v-spacer>
+        <v-icon class="location-pin" id="location-pin" >mdi-map-marker</v-icon>
+        <v-spacer></v-spacer>
+      </v-row>
     </div>
 </template>
 

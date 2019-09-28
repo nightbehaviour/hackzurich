@@ -1,21 +1,19 @@
 <template>
     <v-container class="wizard-container white d-flex flex-column">
+        <TopNav
+                @nextPage="nextPage"
+                @prevPage="prevPage"></TopNav>
         <transition name="slide" mode="out-in">
             <component
                     :is="currentStepComponent"
                     @nextPage="nextPage"
             />
         </transition>
-
-        <BottomNav
-                @nextPage="nextPage"
-                @prevPage="prevPage"
-        />
     </v-container>
 </template>
 
 <script>
-  import BottomNav from '../components/BottomNav'
+  import TopNav from '../components/TopNav'
 
   const wizardSteps = [
     'WizardDepartureLocations',
@@ -27,7 +25,7 @@
 
   export default {
     components: {
-      BottomNav,
+      TopNav,
       WizardDepartureLocations: () => import('./wizard/WizardDepartureLocations.vue'),
       WizardDateAndTime: () => import('./wizard/WizardDateAndTime.vue'),
       WizardPeople: () => import('./wizard/WizardPeople.vue'),

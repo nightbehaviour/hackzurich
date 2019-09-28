@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>Date and Time please Bitch</h1>
+      <h1>When are you free?</h1>
       <v-divider class="hdiv"></v-divider>
       <v-menu
         ref="menu"
@@ -13,6 +13,7 @@
       >
         <template v-slot:activator="{ on }">
           <v-text-field
+            class="date"
             v-model="date"
             label="Pick a date"
             prepend-icon=""
@@ -28,8 +29,18 @@
     
       <v-row justify="space-around">
         <v-col class="lg-offset8" md="12" lg="4">
-          <v-time-picker v-model="time" format="24hr"></v-time-picker>
+          <v-text-field
+                  class="date"
+                  label="Pick a time"
+                  value="12:30:00"
+                  type="time"
+          ></v-text-field>
         </v-col>
+      </v-row>
+      <v-row>
+        <v-spacer></v-spacer>
+        <v-icon class="location-pin" id="location-pin" >mdi-calendar-question</v-icon>
+        <v-spacer></v-spacer>
       </v-row>
     </div>
 </template>

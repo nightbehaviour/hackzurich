@@ -73,6 +73,8 @@ $sbb-dark-gray: #666666;
   .hdiv{
     border-color: $sbb-red!important;
     border-width: 1.5px !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
 .priceBtn {
@@ -81,3 +83,16 @@ $sbb-dark-gray: #666666;
   border: 1px solid;
 }
 
+p{
+  margin-bottom: 100px;
+}
+.depatext{
+  padding: 15px;
+}
+.location-pin{
+  padding: 25px;
+}
+
+.date{
+  margin-top: 45px !important;
+}
