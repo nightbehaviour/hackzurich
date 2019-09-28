@@ -2,6 +2,7 @@ from datetime import timedelta
 import requests
 import json
 import dateparser
+import random
 
 
 """Get the access token and set headers"""
@@ -25,7 +26,6 @@ headers = {
     'X-Conversation-Id': X_Contract_Id,
     'Authorization': 'Bearer ' + access_token,
 }
-
 
 travel_date = '2019-10-27'
 travel_time = '10:00'
@@ -71,13 +71,12 @@ class SurpriseRequest:
         self._travel_time = travel_time
         self._travel_orig_name = travel_orig_name
 
-        price_dicts = []
-        destinations_list = ['Bern', 'Montreux',]
-        for destination in destinations_list:
-            price_dict = self.go_for_offer(travel_dest_name=destination)
-            price_dicts.append(price_dict)
+        destinations_list = ['Bern', 'Frick', 'Luzern']
 
-        return price_dicts
+        destination = random.choice(destinations_list)
+        price_dict = self.go_for_offer(travel_dest_name=destination)
+
+        return price_dict
 
     def go_for_offer(self, travel_dest_name):
         """Chain many functions to return a price (offer or not)."""
