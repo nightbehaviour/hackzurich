@@ -1,0 +1,38 @@
+$sbb-red: #EB0000;
+$black: #000000;
+$sbb-light-gray: #767676;
+$sbb-dark-gray: #666666;
+
+
+// ----------------------------------------------------------------------------------------------------
+// SBB Fonts
+// ----------------------------------------------------------------------------------------------------
+@font-face {
+    font-family: 'SBB Web Bold';
+    src: url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Bold.woff2') format('woff2'),
+    url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Bold.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'SBB Web Light';
+    src: url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Light.woff2') format('woff2'),
+    url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Light.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'SBB Web Roman';
+    src: url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Roman.woff2') format('woff2'),
+    url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Roman.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'SBB Web Thin';
+    src: url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Thin.woff2') format('woff2'),
+    url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Thin.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'SBB Web Ultralight';
+    src: url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-UltraLight.woff2') format('woff2'),
+    url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-UltraLight.woff') format('woff');
+  }
