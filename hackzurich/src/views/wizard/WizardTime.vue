@@ -1,6 +1,7 @@
 <template>
     <div>
       <h1>How much time do you have on your hands?</h1>
+      <v-divider class="hdiv"></v-divider>
       
         <v-slider
         v-model="time"
