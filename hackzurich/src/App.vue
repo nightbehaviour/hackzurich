@@ -1,14 +1,8 @@
 <template>
-    <v-app>
-        <v-app-bar
-                app
-                color="white"
-                elevate-on-scroll
-        >
-            <router-link to=“/wizard”>Go to Foo</router-link>
-            <v-spacer></v-spacer>
-        </v-app-bar>
-    </v-app>
+    <div>
+    <h1>appView</h1>
+    <router-view></router-view>
+    </div>
 </template>
 
 <script>

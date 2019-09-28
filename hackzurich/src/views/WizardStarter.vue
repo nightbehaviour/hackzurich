@@ -1,5 +1,6 @@
 <template>
     <v-container class="wizard-container white d-flex flex-column">
+        <h1>ahhhiuhd</h1>
         <transition name="slide" mode="out-in">
             <component
                     :is="currentStepComponent"
