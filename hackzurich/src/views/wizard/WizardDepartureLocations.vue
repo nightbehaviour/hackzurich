@@ -15,6 +15,7 @@
         <v-text-field 
           required
           label="Starting Destination"
+          v-model="location"
         ></v-text-field>
         <div class="my-auto"></div>
     </div>
@@ -23,7 +24,16 @@
 <script>
 
   export default {
-    name: 'WizardDepartureLocations'
+    name: 'WizardDepartureLocations',
+    data: () => ({
+      location: ""
+    }),
+    watch: {
+      location() {
+        this.$store.commit('setStartLocation', this.location)
+      }
+
+    }
     
   }
 </script>

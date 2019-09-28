@@ -14,9 +14,12 @@
 
   export default {
     name: 'WizardPrice',
-    data () {
-      return{
-        time: 100
+    data: () => {
+      time: 0
+    },
+    watch: {
+      time() {
+        this.$store.commit('setMaxTime', this.time)
       }
     }
   }

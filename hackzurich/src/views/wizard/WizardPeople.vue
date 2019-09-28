@@ -19,14 +19,19 @@
     components: {
       passenger
     },
-    data(){
-      return {
-        passengers: [{
-          halbtax: false,
-          ga: false
-        }]
+    data: () => {
+      passengers: [{
+        halbtax: false,
+        ga: false
+      }]
+    
+    },
+    watch: {
+      passengers() {
+        this.$store.commit('setPassengers', this.passengers)
       }
     }
+
     
   }
 </script>

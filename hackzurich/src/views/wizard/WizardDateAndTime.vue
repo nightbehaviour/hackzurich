@@ -44,6 +44,14 @@
       menu2: false,
       time: '11:15',
     }),
+    watch: {
+      date() {
+        this.$store.commit('setTravelDate', this.date)
+      },
+      time() {
+        this.$store.commit('setTravelTime', this.time)
+      }
+    }
   }
 </script>
 
