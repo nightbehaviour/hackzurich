@@ -9,7 +9,6 @@ Vue.config.productionTip = false
 
 new Vue({
   vuetify,
-  el: '#app',
   router,
   components: { App },
   template: '<App/>',
