@@ -5,6 +5,7 @@
       <v-btn @click="passengers.push({halbtax: false, ga: false})">
         <v-icon color="primary" >mdi-plus</v-icon>
       </v-btn>
+
     </div>
 </template>
 
@@ -24,6 +25,7 @@
         }]
       }
     }
+    
   }
 </script>
 
