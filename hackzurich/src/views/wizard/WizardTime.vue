@@ -3,9 +3,12 @@
       <h1>How much time do you have on your hands?</h1>
       <v-divider class="hdiv"></v-divider>
       
-        <v-slider
+      <v-slider
         v-model="time"
-        ></v-slider>
+      ></v-slider>
+
+      <v-btn id="surpriseButton" block depressed>Surprise Me!</v-btn>
+
       
     </div>
 </template>

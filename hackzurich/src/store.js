@@ -50,7 +50,7 @@ export default new Vuex.Store({
     },
     setMaxTime (state, val){
       state.queryForm.maxTime = val
-    },
+    }, 
   },
   actions: {
 
