@@ -36,3 +36,43 @@ $sbb-dark-gray: #666666;
     src: url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-UltraLight.woff2') format('woff2'),
     url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-UltraLight.woff') format('woff');
   }
+
+
+  h1 {
+    font-family: 'SBB Web Thin';
+    text-align: center
+  }
+
+  h2 {
+    font-family: 'SBB Web Light';
+    text-align: center
+  }
+
+  h3 {
+    font-family: 'SBB Web Light';
+    text-align: center
+  }
+
+  #location-pin {
+    color: #eb0000;
+    font-size: 150px;
+    vertical-align: middle;
+
+  }
+
+  .info-text{
+    font-family: 'SBB Web Roman';
+    
+  }
+
+  #main-title {
+    font-size: 44px;
+    
+  }
+
+  .hdiv{
+    color: #eb0000;
+  }
+
+
+

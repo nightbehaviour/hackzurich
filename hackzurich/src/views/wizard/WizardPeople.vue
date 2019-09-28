@@ -6,7 +6,7 @@
       <passenger></passenger>
 
       <v-btn>
-        <v-icon color="primary" >mdi-plus</v-icon>
+        <v-icon color="primary">mdi-plus</v-icon>
       </v-btn>
 
     </div>
