@@ -1,10 +1,12 @@
 from flask import Flask, render_template, jsonify
+from flask_cors import CORS
 import app.sbbHackClass as sbbHackClass
 from random import *
 
 application = app = Flask(__name__,
         static_folder="./dist/static",
         template_folder="./dist")
+CORS(application)
 
 # Api endpoint
 @app.route('/api/get-offers')
