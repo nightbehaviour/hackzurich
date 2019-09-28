@@ -20,7 +20,8 @@
     'WizardDateAndTime',
     'WizardPeople',
     'WizardPrice',
-    'WizardTime'
+    'WizardTime',
+    'WizardResult'
   ]
 
   export default {
@@ -30,7 +31,8 @@
       WizardDateAndTime: () => import('./wizard/WizardDateAndTime.vue'),
       WizardPeople: () => import('./wizard/WizardPeople.vue'),
       WizardPrice: () => import('./wizard/WizardPrice.vue'),
-      WizardTime: () => import('./wizard/WizardTime.vue')
+      WizardTime: () => import('./wizard/WizardTime.vue'),
+      WizardResult: () => import('./wizard/WizardResult.vue')
 
 },
     data () {
