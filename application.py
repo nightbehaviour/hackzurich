@@ -1,3 +1,4 @@
+import requests
 from flask import Flask, render_template, jsonify, request
 from flask_cors import CORS
 import app.sbbHackClass as sbbHackClass
@@ -13,15 +14,9 @@ CORS(application)
 
 def get_the_offers():
 
-    if request.method == "POST":
-        travel_date = request.form.get('date')
-        travel_time = request.form.get('time')
-        travel_orig_name = request.form.get('start')
-
-    else:
-        travel_date = '2019-10-27'
-        travel_time = '10:00'
-        travel_orig_name = 'Zurich'
+    travel_date = '2019-10-27'
+    travel_time = '10:00'
+    travel_orig_name = 'Zurich'
 
     s_request = sbbHackClass.SurpriseRequest()
     response = s_request.go_for_offers(travel_date,
