@@ -17,8 +17,11 @@
       <v-btn  v-if="this.time!=0" id="surpriseButton" block depressed
         v-on:click="submit"
       >Surprise Me!</v-btn>
-
-      <v-progress-circular v-if="loading" indeterminate></v-progress-circular>
+      <v-row>
+        <v-spacer></v-spacer>
+        <v-progress-circular v-if="loading" indeterminate></v-progress-circular>
+        <v-spacer></v-spacer>
+      </v-row>
         <v-row>
             <v-spacer></v-spacer>
             <v-icon class="location-pin" id="location-pin" >mdi-clock</v-icon>
@@ -75,9 +78,17 @@
           time: time
         }).then(e => {
           if(e.data.success) {
-              console.log(e)
+              return e.data
+              this.loading = false;
           }
-        }).catch(e => {})        
+        }).then(data => {
+          response = data
+          console.log(response)
+          $emit('nextPage')
+        }).catch(error => {
+          console.log(error)
+        })
+        
         
 
 
