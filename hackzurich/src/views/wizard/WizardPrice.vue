@@ -1,6 +1,7 @@
 <template>
     <div>
       <h1>How much bitch?</h1>
+      
       <v-row>
         <v-col>
           <v-btn>0-5 CHF</v-btn>

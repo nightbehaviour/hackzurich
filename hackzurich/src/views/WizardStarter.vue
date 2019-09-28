@@ -21,7 +21,8 @@
     'WizardDepartureLocations',
     'WizardDateAndTime',
     'WizardPeople',
-    'WizardPrice'
+    'WizardPrice',
+    'WizardTime'
   ]
 
   export default {
@@ -30,7 +31,8 @@
       WizardDepartureLocations: () => import('./wizard/WizardDepartureLocations.vue'),
       WizardDateAndTime: () => import('./wizard/WizardDateAndTime.vue'),
       WizardPeople: () => import('./wizard/WizardPeople.vue'),
-      WizardPrice: () => import('./wizard/WizardPrice.vue')
+      WizardPrice: () => import('./wizard/WizardPrice.vue'),
+      WizardTime: () => import('./wizard/WizardTime.vue')
 
 },
     data () {
