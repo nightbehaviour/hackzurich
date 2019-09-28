@@ -4,6 +4,6 @@ itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 Werkzeug==0.16.0
-requests=2.22.0
-dateparser=0.7.2
-json5=0.8.5
+requests==2.22.0
+dateparser==0.7.2
+json5==0.8.5
