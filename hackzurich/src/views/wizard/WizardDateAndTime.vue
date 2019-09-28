@@ -34,6 +34,7 @@
                   label="Pick a time"
                   value="12:30:00"
                   type="time"
+                  v-model="selectedTime"
           ></v-text-field>
         </v-col>
       </v-row>
@@ -53,14 +54,14 @@
       menu: false,
       modal: false,
       menu2: false,
-      time: '11:15',
+      selectedTime: "11:15",
     }),
     watch: {
       date() {
         this.$store.commit('setTravelDate', this.date)
       },
-      time() {
-        this.$store.commit('setTravelTime', this.time)
+      selectedTime() {
+        this.$store.commit('setTravelTime', this.selectedTime)
       }
     }
   }

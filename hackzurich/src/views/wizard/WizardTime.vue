@@ -18,7 +18,6 @@
 </template>
 
 <script>
-  let fetch = require('node-fetch')
   import axios from 'axios';
 
   export default {
@@ -39,15 +38,36 @@
       submit: function() {
         this.loading = true;
 
-        var start = this.$store.state.queryForm;
+
+        //var data = this.$store.state.queryForm;
+        var data = {startLocation: "Basel", travelDate: "2019-10-2", travelTime: "13:45"}
+        
+        
+        var start = data.startLocation
+        var date = data.travelDate
+        var time = data.travelTime
+
+
+
         console.log(start)
+        console.log(date)
+        console.log(time)
+
         
         
-        /*
-        axios.put('http://hack-env.dpcts33unv.eu-central-1.elasticbeanstalk.com/api/get-offers', {
         
-        })        
-        */
+        var response;
+
+        axios.get('http://hack-env.dpcts33unv.eu-central-1.elasticbeanstalk.com/api/get-offers', {
+          start: start,
+          date: date,
+          time: time
+        }).then(e => {
+          if(e.data.success) {
+              console.log(e)
+          }
+        }).catch(e => {})        
+        
 
 
 
