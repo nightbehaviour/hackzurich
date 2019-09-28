@@ -16,12 +16,14 @@ export default new Vuex.Store({
       maxPricePP: 0,
       maxTime: 0,
 
-
-
-
+    },
+    results: {
+      destination: "Frick",
+      offer_price: 2560,
+      rebate: 2540,
+      rebate_pct: 0.5
 
     }
-
   },
   mutations: {
     setStartLocation (state, val){
