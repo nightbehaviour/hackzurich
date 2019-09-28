@@ -68,3 +68,6 @@ typings/
 # virtual env files
 __pycache__/
 venv/
+
+# node
+hackzurich/node_modules/
