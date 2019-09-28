@@ -1,19 +1,11 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import WizardStarter from '../views/WizardStarter'
 
-Vue.use(Router)
 
-const router = new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = new VueRouter({
   routes: [
-    {
-      path: '/wizard',
-      name: 'WizardStarter',
-      component: WizardStarter,
-
-    }
+    // dynamic segments start with a colon
+    { path: '/wizard', component: WizardStarter }
   ]
 })
 
