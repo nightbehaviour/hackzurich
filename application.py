@@ -9,7 +9,7 @@ application = app = Flask(__name__,
 CORS(application)
 
 # Api endpoint
-@app.route('/api/get-offers')
+@app.route('/api/get-offers', methods=['POST'])
 
 def get_the_offers():
 
