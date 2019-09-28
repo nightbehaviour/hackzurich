@@ -45,7 +45,7 @@ $sbb-dark-gray: #666666;
 
   h2 {
     font-family: 'SBB Web Light';
-    text-align: center
+    text-align: center;
   }
 
   h3 {
@@ -54,14 +54,14 @@ $sbb-dark-gray: #666666;
   }
 
   #location-pin {
-    color: #eb0000;
+    color: $sbb-red;
     font-size: 150px;
-    vertical-align: middle;
 
   }
 
   .info-text{
     font-family: 'SBB Web Roman';
+    text-align: center;
     
   }
 
@@ -71,9 +71,13 @@ $sbb-dark-gray: #666666;
   }
 
   .hdiv{
-    border-color: #eb0000!important;
-    border-width: 1px !important;
+    border-color: $sbb-red!important;
+    border-width: 1.5px !important;
   }
 
-
+.priceBtn {
+  background-color: white;
+  opacity: 0.8;
+  border: 1px solid;
+}
 

@@ -1,6 +1,7 @@
 <template>
     <div>
       <h1>Date and Time please Bitch</h1>
+      <v-divider class="hdiv"></v-divider>
       <v-menu
         ref="menu"
         v-model="menu"
@@ -20,15 +21,14 @@
           ></v-text-field>
         </template>
         <v-date-picker v-model="date" no-title scrollable>
-          <div class="flex-grow-1"></div>
-          <v-btn text color="primary" @click="menu = false">Cancel</v-btn>
-          <v-btn text color="primary" @click="$refs.menu.save(date)">OK</v-btn>
+          <v-btn text color=$sbb-black @click="menu = false">Cancel</v-btn>
+          <v-btn text color=$sbb-black @click="$refs.menu.save(date)">OK</v-btn>
         </v-date-picker>
       </v-menu>
-
+    
       <v-row justify="space-around">
         <v-col class="lg-offset8" md="12" lg="4">
-          <v-time-picker v-model="e7" format="24hr"></v-time-picker>
+          <v-time-picker v-model="time" format="24hr"></v-time-picker>
         </v-col>
       </v-row>
     </div>
@@ -42,6 +42,7 @@
       menu: false,
       modal: false,
       menu2: false,
+      time: '11:15',
     }),
   }
 </script>
