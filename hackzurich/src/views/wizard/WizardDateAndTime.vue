@@ -1,10 +1,48 @@
 <template>
-    <h1>helo</h1>
+    <div>
+      <h1>Date and Time please Bitch</h1>
+      <v-menu
+        ref="menu"
+        v-model="menu"
+        :close-on-content-click="false"
+        :return-value.sync="date"
+        transition="scale-transition"
+        offset-y
+        min-width="290px"
+      >
+        <template v-slot:activator="{ on }">
+          <v-text-field
+            v-model="date"
+            label="Pick a date"
+            prepend-icon=""
+            readonly
+            v-on="on"
+          ></v-text-field>
+        </template>
+        <v-date-picker v-model="date" no-title scrollable>
+          <div class="flex-grow-1"></div>
+          <v-btn text color="primary" @click="menu = false">Cancel</v-btn>
+          <v-btn text color="primary" @click="$refs.menu.save(date)">OK</v-btn>
+        </v-date-picker>
+      </v-menu>
+
+      <v-row justify="space-around">
+        <v-col class="lg-offset8" md="12" lg="4">
+          <v-time-picker v-model="e7" format="24hr"></v-time-picker>
+        </v-col>
+      </v-row>
+    </div>
 </template>
 
 <script>
   export default {
-    name: 'WizardDate'
+    name: 'WizardDate',
+    data: () => ({
+      date: new Date().toISOString().substr(0, 10),
+      menu: false,
+      modal: false,
+      menu2: false,
+    }),
   }
 </script>
 

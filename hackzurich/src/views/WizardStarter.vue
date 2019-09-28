@@ -1,6 +1,5 @@
 <template>
     <v-container class="wizard-container white d-flex flex-column">
-        <h1>ahhhiuhd</h1>
         <transition name="slide" mode="out-in">
             <component
                     :is="currentStepComponent"
@@ -20,15 +19,20 @@
 
   const wizardSteps = [
     'WizardDepartureLocations',
-    'WizardDateAndTime'
+    'WizardDateAndTime',
+    'WizardPeople',
+    'WizardPrice'
   ]
 
   export default {
     components: {
       BottomNav,
       WizardDepartureLocations: () => import('./wizard/WizardDepartureLocations.vue'),
-      WizardDateAndTime: () => import('./wizard/WizardDateAndTime.vue')
-    },
+      WizardDateAndTime: () => import('./wizard/WizardDateAndTime.vue'),
+      WizardPeople: () => import('./wizard/WizardPeople.vue'),
+      WizardPrice: () => import('./wizard/WizardPrice.vue')
+
+},
     data () {
       return {
         onboardingStepIndex: 0
