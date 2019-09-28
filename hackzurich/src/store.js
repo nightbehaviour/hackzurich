@@ -54,5 +54,11 @@ export default new Vuex.Store({
   },
   actions: {
 
+    getData(state) {
+      return state.queryForm;
+    },
+    
   }
+  
+
 })

@@ -11,19 +11,23 @@
         v-on:click="submit"
       >Surprise Me!</v-btn>
 
+      <v-progress-circular v-if="loading" indeterminate></v-progress-circular>
+
       
     </div>
 </template>
 
 <script>
   let fetch = require('node-fetch')
+  import axios from 'axios';
 
   export default {
     name: 'WizardPrice',
     data () {
-      
+      loading: false
       return {
-        time: 0
+        time: 0,
+        results: []
       }
     },
     watch: {
@@ -33,23 +37,18 @@
     },
     methods: {
       submit: function() {
-        var OBJECT = {  
-          method: 'GET',
-          
-        }
-        var baseurl = 'http://hack-env.dpcts33unv.eu-central-1.elasticbeanstalk.com';
-        var apiPath = '/api/get-offers';
-        var query = "";
+        this.loading = true;
 
-        var url = new URL(baseurl+apiPath);
-        url.search = new URLSearchParams(query);
+        var start = this.$store.state.queryForm;
+        console.log(start)
+        
+        
+        /*
+        axios.put('http://hack-env.dpcts33unv.eu-central-1.elasticbeanstalk.com/api/get-offers', {
+        
+        })        
+        */
 
-        fetch(url, OBJECT)  
-          .then(response => response.text())
-          .then(data => {
-            console.log(data);
-            return data;
-        });
 
 
       }
