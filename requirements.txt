@@ -7,3 +7,4 @@ Werkzeug==0.16.0
 requests==2.22.0
 dateparser==0.7.2
 json5==0.8.5
+flask-cors==3.0.8
