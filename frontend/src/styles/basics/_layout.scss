@@ -1,0 +1,11 @@
+#app {
+    padding: $grid-gutter-width/2;
+}
+.card {
+    margin: $grid-gutter-width/2 0;
+}
+.stamp {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
