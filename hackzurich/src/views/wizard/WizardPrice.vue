@@ -8,10 +8,10 @@
         <v-spacer></v-spacer>
         <v-col>
           <v-btn class="priceBtn" onclick="this.maxPrice=5" outlined depressed>0-5 CHF</v-btn>
-          <v-btn class="priceBtn" onclick="this.maxPrice=10" outlined depressed>5-10 CHF</v-btn>
+          <v-btn class="priceBtn" onclick="this.maxPrice=20" outlined depressed>15-20 CHF</v-btn>
         </v-col>
         <v-col>
-          <v-btn class="priceBtn" onclick="this.maxPrice=20" outlined depressed>15-20 CHF</v-btn>
+          <v-btn class="priceBtn" onclick="this.maxPrice=10" outlined depressed>5-10 CHF</v-btn>
           <v-btn class="priceBtn" onclick="this.maxPrice=999" outlined depressed>20+ CHF</v-btn>
         </v-col>
         <v-spacer></v-spacer>
