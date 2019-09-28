@@ -3,8 +3,8 @@
     <v-spacer></v-spacer>
     <h3>Passenger</h3>
     <v-spacer></v-spacer>
-    <v-chip :color="passengerData.halbtax ? 'primary':''" :value="passengerData.halbtax" @click="passengerData.halbtax = !passengerData.halbtax">1/2</v-chip>
-    <v-chip :color="passengerData.ga ? 'primary':''" :value="passengerData.ga" @click="passengerData.ga = !passengerData.ga">GA</v-chip>
+    <v-chip class="chips" :color="passengerData.halbtax ? 'primary':''" :value="passengerData.halbtax" @click="passengerData.halbtax = !passengerData.halbtax">1/2</v-chip>
+    <v-chip class="chips" :color="passengerData.ga ? 'primary':''" :value="passengerData.ga" @click="passengerData.ga = !passengerData.ga">GA</v-chip>
     <v-spacer></v-spacer>
   </v-row>
 </template>

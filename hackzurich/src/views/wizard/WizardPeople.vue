@@ -3,8 +3,8 @@
       <h1>Are you looking to travel by yourself or are you bringing company?</h1>
       <v-divider class="hdiv" mb="12"></v-divider>
 
-      <passenger v-for="(passenger, index) in passengers" :key="index" @input="passengers[index]= $event" :passenger="passenger"></passenger>
-      <v-btn class="buttonpeople" @click="passengers.push({halbtax: false, ga: false})">
+      <passenger class="passengers" v-for="(passenger, index) in passengers" :key="index" @input="passengers[index]= $event" :passenger="passenger"></passenger>
+      <v-btn text color="secondary" class="buttonpeople" @click="passengers.push({halbtax: false, ga: false})">
         <v-icon color="primary" >mdi-plus</v-icon>
       </v-btn>
 
