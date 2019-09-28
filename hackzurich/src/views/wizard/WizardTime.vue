@@ -81,8 +81,10 @@
           time: time
         }).then(e => {
           if(e.data.success) {
-              return e.data
+              console.log(e.data.JSON())
               this.loading = false;
+              return e.data
+              
           }
         }).then(data => {
           response = data
