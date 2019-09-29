@@ -70,6 +70,7 @@
         console.log(date)
         console.log(time)
 
+
         
         
         
@@ -80,16 +81,9 @@
           date: date,
           time: time
         }).then(e => {
-          if(e.data.success) {
-              console.log(e.data.JSON())
-              this.loading = false;
-              return e.data
-              
-          }
-        }).then(data => {
-          response = data
+          response = e.data;
           console.log(response)
-          $emit('nextPage')
+          this.$store.commit('setResults', response)
         }).catch(error => {
           console.log(error)
         })

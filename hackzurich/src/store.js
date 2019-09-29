@@ -52,7 +52,24 @@ export default new Vuex.Store({
     },
     setMaxTime (state, val){
       state.queryForm.maxTime = val
-    }, 
+    },
+
+
+    setResults (state, val){
+      state.results = val
+    },
+    setDestination (state, val){
+      state.results.destination = val
+    },
+    offer_price (state, val){
+      state.results.offer_price = val
+    },  
+    rebate (state, val){
+      state.results.rebate = val
+    },  
+    rebate_pct (state, val){
+      state.results.rebate_pct = val
+    },    
   },
   actions: {
 
