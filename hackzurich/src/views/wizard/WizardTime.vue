@@ -56,8 +56,8 @@
         this.loading = true;
 
 
-        //var data = this.$store.state.queryForm;
-        var data = {startLocation: "Basel", travelDate: "2019-10-2", travelTime: "13:45"}
+        var data = this.$store.state.queryForm;
+        //var data = {startLocation: "Basel", travelDate: "2019-10-2", travelTime: "13:45"}
         
         
         var start = data.startLocation
@@ -76,7 +76,7 @@
         
         var response;
 
-        axios.get('http://hack-env.dpcts33unv.eu-central-1.elasticbeanstalk.com/api/get-offers', {
+        axios.post('http://hack-env.dpcts33unv.eu-central-1.elasticbeanstalk.com/api/get-offers', {
           start: start,
           date: date,
           time: time
