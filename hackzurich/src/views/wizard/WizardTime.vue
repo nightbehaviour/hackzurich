@@ -76,7 +76,7 @@
         
         var response;
 
-        axios.post('http://hack-env.dpcts33unv.eu-central-1.elasticbeanstalk.com/api/get-offers', {
+        axios.get('http://hack-env.dpcts33unv.eu-central-1.elasticbeanstalk.com/api/get-offers', {
           start: start,
           date: date,
           time: time

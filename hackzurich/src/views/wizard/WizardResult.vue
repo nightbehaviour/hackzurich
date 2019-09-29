@@ -15,7 +15,7 @@
         <h1>{{this.$store.state.results.destination}}</h1>
         <p>{{this.$store.state.queryForm.travelDate}} - {{this.$store.state.queryForm.travelTime}}</p>
         <v-spacer></v-spacer>
-        <p>We can offer this trip to the special price of {{(this.$store.state.results.offer_price/100).toFixed(2)}} CHF. This trip is {{(this.$store.state.results.rebate/100).toFixed(2)}} cheaper than the ticket usually is.</p>
+        <p>We can offer this trip to the special price of {{(this.$store.state.results.offer_price/100).toFixed(2)}} CHF. This trip is {{(this.$store.state.results.rebate/100).toFixed(2)}} cheaper than the ticket usually is. You are saving {{this.$store.state.results.rebate_pct * 100 + "%"}}</p>
         <v-btn id="surpriseButton" block depressed
         >Book your trip now!</v-btn>
     </div>
