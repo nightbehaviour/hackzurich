@@ -1,0 +1,125 @@
+$sbb-red: #EB0000;
+$black: #000000;
+$sbb-light-gray: #767676;
+$sbb-dark-gray: #666666;
+
+
+// ----------------------------------------------------------------------------------------------------
+// SBB Fonts
+// ----------------------------------------------------------------------------------------------------
+@font-face {
+    font-family: 'SBB Web Bold';
+    src: url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Bold.woff2') format('woff2'),
+    url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Bold.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'SBB Web Light';
+    src: url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Light.woff2') format('woff2'),
+    url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Light.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'SBB Web Roman';
+    src: url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Roman.woff2') format('woff2'),
+    url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Roman.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'SBB Web Thin';
+    src: url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Thin.woff2') format('woff2'),
+    url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-Thin.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'SBB Web Ultralight';
+    src: url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-UltraLight.woff2') format('woff2'),
+    url('https://cdn.app.sbb.ch/fonts/v1_6_subset/SBBWeb-UltraLight.woff') format('woff');
+  }
+
+
+  h1 {
+    font-family: 'SBB Web Thin';
+    text-align: center
+  }
+
+  h2 {
+    font-family: 'SBB Web Light';
+    text-align: center;
+  }
+
+  h3 {
+    font-family: 'SBB Web Light';
+    text-align: center
+  }
+
+  #location-pin {
+    color: $sbb-red;
+    font-size: 150px;
+
+  }
+
+  .info-text{
+    font-family: 'SBB Web Roman';
+    text-align: center;
+    
+  }
+
+  #main-title {
+    font-size: 44px;
+    
+  }
+
+  .hdiv{
+    border-color: $sbb-red!important;
+    border-width: 1.5px !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+.priceBtn {
+  color: white;
+  border: 2px solid;
+  width: 100px!important;
+  height: 100px!important;
+  margin-bottom: 40px;
+
+}
+
+p{
+  margin-bottom: 100px;
+  text-align: center;
+}
+.depatext{
+  padding: 15px;
+}
+.location-pin{
+  padding: 25px;
+}
+
+.date{
+  margin-top: 45px !important;
+}
+
+#surpriseButton {
+  background-color: $sbb-red;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.chips{
+  margin-right: 7px;
+}
+.buttonpeople {
+  margin-left: 70px;
+}
+.passengers {
+  padding: 20px;
+}
+.slider {
+ margin-top: 60px;
+  margin-bottom: 10px;
+}
+.sliderdisabled {
+}
