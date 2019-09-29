@@ -20,12 +20,6 @@ def get_the_offers():
         travel_time = data.get('time')
         travel_orig_name = data.get('start')
 
-    elif request.method == "GET":
-        data = request.get_json()
-        travel_date = data.get('date')
-        travel_time = data.get('time')
-        travel_orig_name = data.get('start')
-
     else:
         travel_date = '2019-10-27'
         travel_time = '10:00'
